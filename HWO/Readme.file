@@ -1,0 +1,36 @@
+//Abumere Okhihan
+How It Works
+
+Parent Process (Producer)
+
+Asks the user to enter numbers.
+
+Sends numbers to the child through pipe1.
+
+Waits for confirmation from the child via pipe2.
+
+Repeats this until it has sent MAX numbers.
+
+Child Process (Consumer)
+
+Waits for numbers from the parent via pipe1.
+
+Prints each received number.
+
+Sends back a "CONSUMED" message through pipe2.
+
+Repeats this until all numbers are processed.
+
+Important Constants
+
+STR_LEN: Maximum length of messages.
+
+MAX: Number of values to process.
+
+Error Handling
+
+Checks if pipes are created successfully.
+
+Ensures fork() works properly.
+
+Makes sure messages are properly formatted.
